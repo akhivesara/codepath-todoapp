@@ -26,8 +26,11 @@ The following **optional** features are implemented:
 * [ ] Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 The following **additional** features are implemented:
+* [√] Saving empty todo item, will not save it in both views.
+* [√] Back Button take user back to the previos activity
 
 * [ ] List anything else that you can get done to improve the app functionality!
+
 
 ## Video Walkthrough 
 

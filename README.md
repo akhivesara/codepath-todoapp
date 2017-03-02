@@ -42,7 +42,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
+I will be working on the optional features above.
+
 Describe any challenges encountered while building the app.
+* [] IDE does not auto complete method arguments. Need to figure that out.
 
 ## License
 

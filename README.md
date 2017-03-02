@@ -45,11 +45,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 I will be working on the optional features above.
 
 Describe any challenges encountered while building the app.
-* [] IDE does not auto complete method arguments. Need to figure that out.
+* IDE does not auto complete method arguments. Need to figure that out.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Ashish Khivesara]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

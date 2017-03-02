@@ -60,6 +60,19 @@ public class EditActivity extends AppCompatActivity {
         this.finish();
     }
 
+    public void onDeleteItem(View v) {
+
+        Log.v(LOG_TAG, "Delete");
+
+        Intent intent = new Intent();
+
+        bundle.putString("editedValue", "");
+        intent.putExtras(bundle);
+        setResult(RESULT_OK, intent);
+
+        this.finish();
+
+    }
     public void onBackPressed() {
         Log.v(LOG_TAG, "Back Button");
         this.finish();

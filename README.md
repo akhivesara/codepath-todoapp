@@ -6,7 +6,7 @@
 
 Submitted by: **Ashish Khivesara**
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total inlcuding setup
 
 ## User Stories
 

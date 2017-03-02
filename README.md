@@ -6,7 +6,7 @@
 
 Submitted by: **Ashish Khivesara**
 
-Time spent: **3** hours spent in total inlcuding setup
+Time spent: **3** hours spent in total including environment setup
 
 ## User Stories
 

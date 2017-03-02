@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         setupListViewListener();
     }
 
+    /**
+     * onClick handler for the Save Button
+     * @param v View
+     */
     public void onAddItem(View v) {
         EditText eNewItem = (EditText) findViewById(R.id.etNewItem);
         String itemText = eNewItem.getText().toString();
@@ -52,7 +56,15 @@ public class MainActivity extends AppCompatActivity {
         writeItems();
     }
 
+    /**
+     * Saves a todo item in the items list. If the value is empty string, ignores for new items, deletes existing items. Updates existing index, adds if index is >= items size
+     * @param index
+     * @param value
+     */
     private void saveItem(int index , String value) {
+        if (items == null) {
+            return;
+        }
         value = value.trim();
         if (value.isEmpty()) {
             if (index < items.size()) {
@@ -64,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
             items.set(index, value);
         }
     }
+
+    /**
+     * Implement onClick and onLongClick for each listItem
+     */
     private void setupListViewListener() {
 
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -95,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Reads from TODO_FILE_NAME, if file does not exist, then creates one
+     */
     private void readItems() {
         File fileDir = getFilesDir();
         File todoFile = new File(fileDir, TODO_FILE_NAME);
@@ -112,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Writes into TODO_FILE_NAME
+     */
     private void writeItems() {
         File fileDir = getFilesDir();
         File todoFile = new File(fileDir, TODO_FILE_NAME);
@@ -123,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Launch edit activity. Pass bundle with context
+     * @param position
+     */
     private void lauchEditActivity(int position) {
         Intent intent = new Intent(MainActivity.this, EditActivity.class);
 
@@ -135,6 +161,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Handles launching MainActivity from EditActivity. Reads context from bundle and handles saving and writing to persist data
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {

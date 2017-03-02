@@ -44,6 +44,10 @@ public class EditActivity extends AppCompatActivity {
         newText.setSelection(currentText.length());
     }
 
+     /**
+     * onClick handler for Save Button
+     * @param v
+     */
     public void onEditItem(View v) {
         Log.v(LOG_TAG, "Edit On Save");
 
@@ -60,6 +64,10 @@ public class EditActivity extends AppCompatActivity {
         this.finish();
     }
 
+    /**
+     * onClick handler for Delete Button
+     * @param v
+     */
     public void onDeleteItem(View v) {
 
         Log.v(LOG_TAG, "Delete");
@@ -73,6 +81,8 @@ public class EditActivity extends AppCompatActivity {
         this.finish();
 
     }
+
+    // Handle back button
     public void onBackPressed() {
         Log.v(LOG_TAG, "Back Button");
         this.finish();
